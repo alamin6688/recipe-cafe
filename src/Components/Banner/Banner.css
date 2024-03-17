@@ -1,12 +1,6 @@
 .container{
-    background-image: url(../../assets/images/chef-cooking.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 1320px;
-    height: 800px;
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background-repeat: no-repeat;
+    border-radius: 15px;
 }
-

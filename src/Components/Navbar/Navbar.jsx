@@ -1,10 +1,10 @@
 const Navbar = () => {
   return (
-    <div className="mt-2 mx-auto">
+    <div className="mt-2 w-[90%] mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -38,11 +38,11 @@ const Navbar = () => {
                 </li>
             </ul>
           </div>
-        <a className="btn btn-ghost text-[18px] lg:text-4xl pl-0">
+        <a className="btn btn-ghost text-[18px] lg:text-4xl pl-2">
             Recipe Cafe
         </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex ">
             <ul className="menu menu-horizontal px-1 text-[16px] font-normal">
                 <li>
                   <a>Home</a>
