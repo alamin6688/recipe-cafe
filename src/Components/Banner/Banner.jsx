@@ -1,7 +1,7 @@
 import './Banner.css'
 const Banner = () => {
     return (
-        <div className="container mx-auto mt-8 mb-24 text-center pt-64">
+        <div className="container w-[90%] lg:w-full mx-auto mt-8 mb-24 text-center pt-64">
             <h3 className="text-2xl lg:text-5xl font-bold text-center mb-6 text-white">
                 Delight in every bite and taste the magic
             </h3>

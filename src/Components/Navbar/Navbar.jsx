@@ -38,7 +38,7 @@ const Navbar = () => {
                 </li>
             </ul>
           </div>
-        <a className="btn btn-ghost text-2xl lg:text-4xl pl-0">
+        <a className="btn btn-ghost text-[18px] lg:text-4xl pl-0">
             Recipe Cafe
         </a>
         </div>
@@ -60,12 +60,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-end space-x-2">
         <div className="form-control">
-            <input type="text" placeholder="Search" className="input input-bordered rounded-3xl w-24 md:w-auto bg-gray-100" />
+            <input type="text" placeholder="Search" className="input input-bordered rounded-3xl w-24 md:w-auto bg-gray-100 border-none" />
         </div>
         <div className="w-10 rounded-full">
           <div>
-            <button className="btn rounded-full bg-green-400 text-black">
-            <i class="fa-regular fa-user"></i>
+            <button className="btn rounded-full border-none bg-green-400 text-black">
+            <i className="fa-regular fa-user"></i>
             </button>
           </div>
         </div>
