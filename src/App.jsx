@@ -14,31 +14,34 @@ function App() {
 
   const handleWantToCook = (recipe) => {
     if (selectedRecipes.some((item) => item.name === recipe.name)) {
-      toast.error("Recipe already selected !");
+      toast.error("Already exist !");
     } else {
       setSelectedRecipes([...selectedRecipes, recipe]);
-      toast.success("Recipe added to Cook list !");
+      toast.success("Recipe added to Cooklist !");
     }
   };
 
   return (
+    <>
     <main className="w-[90%]  mx-auto">
       <div className="p-4 lg:p-0 ">
-        <Navbar />
+        <Navbar></Navbar>
         <Banner className="w-full"></Banner>
-        <CardCaption />
+        <CardCaption></CardCaption>
         <div className="flex flex-col md:flex-row gap-5  justify-center mx-auto">
-          <Recipes handleWantToCook={handleWantToCook} />
-          <Sidebar selectedRecipes={selectedRecipes} />
+          <Recipes handleWantToCook={handleWantToCook}></Recipes>
+          <Sidebar selectedRecipes={selectedRecipes}></Sidebar>
         </div>
       </div>
 
-      {/* toast */}
+      {/* Toastify */}
       <div className="App">
-        <ToastContainer />
+        <ToastContainer></ToastContainer>
       </div>
-      <Footer></Footer>
+
     </main>
+    <Footer></Footer>
+    </>
   );
 }
 

@@ -6,10 +6,10 @@ import { FaHourglassStart } from "react-icons/fa";
 import "./Sidebar.css";
 
 const Sidebar = ({ selectedRecipes }) => {
-  const [currentlyCooking, setCurrentlyCooking] = useState([]);
-  const [hiddenRows, setHiddenRows] = useState([]);
+    const [currentlyCooking, setCurrentlyCooking] = useState([]);
+    const [hiddenRows, setHiddenRows] = useState([]);
 
-  const handlePreparingButton = (recipeIndex) => {
+    const handlePreparingButton = (recipeIndex) => {
     const updatedSelectedRecipes = [...selectedRecipes];
     const removedRecipe = updatedSelectedRecipes.splice(recipeIndex, 1)[0];
 
@@ -18,44 +18,44 @@ const Sidebar = ({ selectedRecipes }) => {
 
     // Show toast
     toast.success("Recipe added to Currently Cooking list !");
-  };
+    };
 
-  const getDisplayedIndex = (index) => {
-    let displayedIndex = 0;
-    for (let i = 0; i <= index; i++) {
-      if (!hiddenRows.includes(i)) {
-        displayedIndex++;
-      }
+    const getDisplayedIndex = (index) => {
+        let displayedIndex = 0;
+        for (let i = 0; i <= index; i++) {
+            if (!hiddenRows.includes(i)) {
+            displayedIndex++;
+        }
     }
     return displayedIndex;
-  };
+    };
 
-  const calculateTotalTime = () => {
-    const totalTime = currentlyCooking.reduce(
-      (total, recipe) => total + parseFloat(recipe.preparing_time),
-      0
-    );
+    const calculateTotalTime = () => {
+        const totalTime = currentlyCooking.reduce(
+        (total, recipe) => total + parseFloat(recipe.preparing_time),
+            0
+        );
     return totalTime;
-  };
+    };
 
-  const calculateTotalCalories = () => {
-    return currentlyCooking.reduce(
-      (total, recipe) => total + parseFloat(recipe.calories),
-      0
-    );
-  };
+    const calculateTotalCalories = () => {
+        return currentlyCooking.reduce(
+        (total, recipe) => total + parseFloat(recipe.calories),
+            0
+        );
+    };
 
   return (
     <>
       <div className="container w-full md:w-1/3 rounded-xl h-max">
         <div>
-          <div className="text-center px-14 pt-5 mb-3">
-            <h1 className="font-bold mb-2 text-lg md:text-xl">
-              Want to cook: {selectedRecipes.length - hiddenRows.length}
-            </h1>
+            <div className="text-center px-14 pt-5 mb-3">
+                <h1 className="font-bold mb-2 text-lg md:text-xl">
+                    Want to cook: {selectedRecipes.length - hiddenRows.length}
+                </h1>
             <hr />
-          </div>
-          <table className="text-gray-500 w-full text-left table-auto">
+            </div>
+            <table className="text-gray-500 w-full text-left table-auto">
             <thead>
               <tr className="">
                 <th className=""></th>
@@ -70,15 +70,15 @@ const Sidebar = ({ selectedRecipes }) => {
                 (recipe, index) =>
                   !hiddenRows.includes(index) && (
                     <tr
-                      key={index}
-                      className="bg-gray-100 border-b border-gray-200"
+                        key={index}
+                        className="bg-gray-100 border-b border-gray-200"
                     >
                       <td className="font-bold px-4 py-2 sm:w-0 md:w-auto">
-                        {getDisplayedIndex(index)}
+                            {getDisplayedIndex(index)}
                       </td>
                       <td className=" sm:w-0 md:w-auto">{recipe.name}</td>
                       <td className=" sm:w-0 md:w-auto">
-                        {recipe.preparing_time}
+                            {recipe.preparing_time}
                       </td>
                       <td className=" sm:w-0 md:w-auto">{recipe.calories}</td>
                       <td className=" w-0 md:w-auto">
@@ -93,7 +93,7 @@ const Sidebar = ({ selectedRecipes }) => {
                         <div className="hidden md:block">
                           <button
                             onClick={() => handlePreparingButton(index)}
-                            className="rounded-full bg-[#0BE58A] text-black py-2 px-3 hover:bg-green-500"
+                            className="rounded-full text-xs font-normal border-none bg-green-400 text-black py-2 px-3 hover:bg-green-500"
                           >
                             Preparing
                           </button>

@@ -5,13 +5,13 @@ const Recipe = ({ recipe, handleWantToCook }) => {
     recipe;
   return (
     <div className="flex">
-      <div className="card w-full bg-gray-200 border-2 p-4 shadow-2xl rounded-xl">
+      <div className="card w-full bg-slate-100 border-2 p-6 shadow-2xl rounded-xl">
         <img className="rounded-2xl w-full " src={image} alt="food" />
 
         <div className="card-body p-0 pt-6">
-          <h2 className="card-title text-xl font-semibold">{name}</h2>
-          <p className="text-xs font-normal text-[#878787]"> {description}</p>
-          <h2 className="text-[18px] font-semibold">Ingredients: 4</h2>
+            <h2 className="card-title text-xl font-semibold m-1">{name}</h2>
+            <p className="text-xs font-normal text-[#878787]"> {description}</p>
+            <h2 className="text-[18px] font-semibold m-0">Ingredients: 4</h2>
           <div className="card-actions justify-start">
             <div className="font-normal text-[#878787]">
               <p>
@@ -40,7 +40,7 @@ const Recipe = ({ recipe, handleWantToCook }) => {
         <div className="mt-4">
           <button
             onClick={() => handleWantToCook(recipe)}
-            className="btn btn-ghost bg-green-400 text-black rounded-3xl"
+            className="btn btn-ghost hover:bg-green-500 bg-green-400 text-black rounded-3xl"
           >
             Want to Cook
           </button>
