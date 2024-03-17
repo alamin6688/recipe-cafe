@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
-    <div className="mt-2 w-[90%] mx-auto">
-      <div className="navbar bg-base-100">
+    <div className="">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0">
@@ -60,11 +60,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end space-x-2">
         <div className="form-control">
-            <input type="text" placeholder="Search" className="input input-bordered rounded-3xl w-24 md:w-auto bg-gray-100 border-none" />
+            <input type="text" placeholder="Search" className="input input-bordered rounded-3xl w-24 md:w-auto bg-gray-200 border-none" />
         </div>
         <div className="w-10 rounded-full">
           <div>
-            <button className="btn rounded-full border-none bg-green-400 text-black">
+            <button className="btn rounded-full border-none bg-green-400 text-black px-[18px] py-4">
             <i className="fa-regular fa-user"></i>
             </button>
           </div>

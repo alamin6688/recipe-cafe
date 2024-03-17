@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
 const Recipe = ({ recipe, handleWantToCook }) => {
-  const { name, image, description, ingredients, preparing_time, calories } = recipe;
+  const { name, image, description, ingredients, preparing_time, calories } =
+    recipe;
   return (
     <div className="flex">
-      <div className="card w-96 bg-base-100 border-2 p-4 shadow-2xl">
-        <figure>
-          <img className="rounded-2xl w-full h-full" src={image} alt="food" />
-        </figure>
+      <div className="card w-full bg-gray-200 border-2 p-4 shadow-2xl rounded-xl">
+        <img className="rounded-2xl w-full " src={image} alt="food" />
+
         <div className="card-body p-0 pt-6">
           <h2 className="card-title text-xl font-semibold">{name}</h2>
           <p className="text-xs font-normal text-[#878787]"> {description}</p>
